@@ -1,6 +1,6 @@
 # Fancy post
 
-<img src="screenshots/fancy-post-example-1.png" width="700" height="485"/>
+![Fancy post](screenshots/fancy-post-example-1.png) <!-- .element height="100%" width="100%" -->
 
 ## Motivation
 With Facebook, YouTube and more apps giving you the power to publish user driven content like posts and videos, this UI library will help you implement a fancy post component so your users can get excited about publishing their own content through your app.
