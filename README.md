@@ -15,15 +15,123 @@ If you want to use Fancy post to develop commercial sites, themes, projects, and
 ### Open source license
 If you are creating an open source application under a license compatible with the GNU GPL license v3, you may use Fancy post under the terms of the GPLv3.
 
+## Styles
+This library leverages a few different library styles and patterns, such as `Ant Design`, `Material UI`, `SASS` and `BEM (Block Element and Modifier)`.
+
+## Rules
+Use Rules in combination with the TypeHere component to show which FormType will be rendered. If user types: `https://tenor.com/search/kitten-gifs hello kittens`, then the FormType will render as `WebUrl`.
+
 ## API
-### TypeHere
+
+### Schema: Content types
+Create and use Content types, you can begin by using our out-of-the-box content types:
+
+#### Blurb
+`Render only Description field and minimise all other fields as toggle options. Show Image only in preview pane.`
+
+```jsx
+fancyPost.contentType({
+  type: 'blurb',
+  fields: [{
+      name: 'title',
+      minimise: true,
+      validation: {}
+    },
+    {
+      name: 'description',
+      show: true,
+      validation: {}
+    },
+		{
+      name: 'weburl',
+      minimise: true,
+      validation: {}
+    },
+		{
+      name: 'image',
+      preview: true,
+      validation: {}
+    },
+  ]
+});
+```
+
+#### Web Url
+`Render only Web Url field and minimise all other fields as toggle options. Show Image only in preview pane.`
+
+```jsx
+fancyPost.contentType({
+  type: 'blurb',
+  fields: [{
+      name: 'title',
+      minimise: true,
+      validation: {}
+    },
+    {
+      name: 'description',
+      minimise: true,
+      validation: {}
+    },
+		{
+      name: 'weburl',
+      show: true,
+      validation: {}
+    },
+		{
+      name: 'image',
+      preview: true,
+      validation: {}
+    },
+  ]
+});
+```
+
+#### Image
+`Render only Image field and minimise all other fields as toggle options. Show Image both as a field and in the preview pane.`
+
+```jsx
+fancyPost.contentType({
+  type: 'blurb',
+  fields: [{
+      name: 'title',
+      minimise: true,
+      validation: {}
+    },
+    {
+      name: 'description',
+      minimise: true,
+      validation: {}
+    },
+		{
+      name: 'weburl',
+      minimise: true,
+      validation: {}
+    },
+		{
+      name: 'image',
+      show: true,
+      preview: true,
+      validation: {}
+    },
+  ]
+});
+```
+
+### Component: TypeHere
 `import {  TypeHere } from '../index.js';`
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| preview | component | Preview component to preview TypeHere results |
+| preview | component | Preview component to render TypeHere results |
 
-### FormType
+### Component: Preview
+`import {  Preview } from '../index.js';`
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| showResponsive | prop | Show render at width 400px |
+
+### Component: FormType
 `import {  FormType } from '../index.js';`
 
 | Name | Type | Description |
