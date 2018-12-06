@@ -3,7 +3,7 @@
 ![Fancy post](screenshots/fancy-post-example-1.png) <!-- .element height="100%" width="100%" -->
 
 ## Motivation
-With Facebook, YouTube and more apps giving you the power to publish user driven content like posts and videos, this UI library will help you implement a fancy post component so your users can get excited about publishing their own content through your app.
+With Facebook, YouTube and more services giving you the power to publish user driven content like posts and videos, this library will help you implement `Fancy post` so your users can get excited about publishing their own content through your app.
 
 ## Supported React versions
 This package requires React 16.6.0 and higher.
@@ -16,106 +16,55 @@ If you want to use Fancy post to develop commercial sites, themes, projects, and
 If you are creating an open source application under a license compatible with the GNU GPL license v3, you may use Fancy post under the terms of the GPLv3.
 
 ## Usage
-Type some text, “hello kitty”, into the `textarea` and the `Rules` will help determine which `FormType` to render, such as, `Blurb`, `Web Url` or `Image`. After this, fine-tune your form details and click `Save`.
+Type some text, “hello kitty”, into the textarea and the `Rules` will help determine which `FormType` to render, such as, `Post`, `Web Url` or `Image`. After this, fine-tune your form details and click Save.
 
 ## Styles
 This library leverages a few different library styles and patterns, such as `Ant Design`, `Material UI`, `SASS` and `BEM (Block Element and Modifier)`.
 
 ## Rules
-Use Rules in combination with the TypeHere component to show which FormType will be rendered. If user types: `https://tenor.com/search/kitten-gifs hello kitty`, then the FormType will render as `WebUrl`.
+Use `Rules` in combination with `Schema` and `TypeHere` to help render which `FormType` will show. If user types, `https://tenor.com/search/kitten-gifs hello kitty`, then the `weburl` FormType will be rendered.
 
 ## API
 
-### Schema: Content types
-Create and use Content types, you can begin by using our out-of-the-box content types:
+### Schema type
+Create and use Schema types, there are 3 out-of-the-box schema types.
 
-#### Blurb
-`Render only Description field and minimise all other fields as toggle options. Show Image only in preview pane.`
+#### Post
+`Use the Post schema.`
 
 ```jsx
-fancyPost.contentType({
-  type: 'blurb',
-  fields: [{
-      field: 'title',
-      options: 'minimise',
-      validation: {}
-    },
-    {
-      field: 'description',
-      options: 'show',
-      validation: {}
-    },
-    {
-      field: 'weburl',
-      options: 'minimise',
-      validation: {}
-    },
-		{
-      field: 'image',
-      options: 'preview',
-      validation: {}
-    },
-  ]
+fancyPost.schema({
+  type: 'post',
+  fields: [‘title', 'description', 'url', 'image']
 });
 ```
 
 #### Web Url
-`Render only Web Url field and minimise all other fields as toggle options. Show Image only in preview pane.`
+`Use the Web Url schema.`
 
 ```jsx
-fancyPost.contentType({
+fancyPost.schema({
   type: 'weburl',
-  fields: [{
-      field: 'title',
-      options: 'minimise',
-      validation: {}
-    },
-    {
-      field: 'description',
-      options: 'minimise',
-      validation: {}
-    },
-    {
-      field: 'weburl',
-      options: 'show',
-      validation: {}
-    },
-    {
-      field: 'image',
-      options: 'preview',
-      validation: {}
-    },
-  ]
+  fields: [‘title', 'description', 'url', 'image']
 });
 ```
 
 #### Image
-`Render only Image field and minimise all other fields as toggle options. Show Image both as a field and in the preview pane.`
+`Use the Image schema.`
 
 ```jsx
-fancyPost.contentType({
+fancyPost.schema({
   type: 'image',
-  fields: [{
-      field: 'title',
-      options: 'minimise',
-      validation: {}
-    },
-    {
-      field: 'description',
-       options: 'minimise',
-      validation: {}
-    },
-    {
-      field: 'weburl',
-      options: 'minimise',
-      validation: {}
-    },
-    {
-      field: 'image',
-      options: 'show, preview',
-      validation: {}
-    },
-  ]
+  fields: ['title', 'description', 'url', 'image']
+});
+```
+
+#### Create your own
+
+```jsx
+fancyPost.schema({
+  type: 'video',
+  fields: ['title', 'description', 'url', 'image']
 });
 ```
 
@@ -124,7 +73,7 @@ fancyPost.contentType({
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| preview | component | Preview component to render TypeHere results |
+| preview | component | Render TypeHere results |
 
 ### Component: Preview
 `import {  Preview } from '../index.js';`
@@ -138,7 +87,7 @@ fancyPost.contentType({
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| default | string | String for content type, such as: blurb, weburl or image |
+| default | string | String for Schema types, such as: post, weburl or image |
 
 ## Example
 ```jsx
@@ -154,7 +103,7 @@ class App extends Component {
         <TypeHere
           preview={Preview}
         />
-        <FormType default="blurb" />
+        <FormType default="post" />
       </Wrapper>
     );
   }
