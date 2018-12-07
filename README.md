@@ -30,7 +30,7 @@ Use `Rules` in combination with `Schema` and `TypeHere` to help render which `Fo
 Create and use Schema types, there are 3 out-of-the-box schema types.
 
 #### Post
-`Use the Post schema.`
+`Use the post schema`
 
 ```jsx
 fancyPost.schema({
@@ -40,7 +40,7 @@ fancyPost.schema({
 ```
 
 #### Web Url
-`Use the Web Url schema.`
+`Use the weburl schema`
 
 ```jsx
 fancyPost.schema({
@@ -50,7 +50,7 @@ fancyPost.schema({
 ```
 
 #### Image
-`Use the Image schema.`
+`Use the image schema`
 
 ```jsx
 fancyPost.schema({
