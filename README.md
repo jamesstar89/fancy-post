@@ -33,39 +33,35 @@ Create and use Schema types, there are 3 out-of-the-box schema types.
 `Use the post schema`
 
 ```jsx
-fancyPost.schema({
-  type: 'post',
+post: {
   fields: ['title', 'description', 'url', 'image']
-});
+}
 ```
 
 #### Web Url
 `Use the weburl schema`
 
 ```jsx
-fancyPost.schema({
-  type: 'weburl',
+weburl: {
   fields: ['title', 'description', 'url', 'image']
-});
+}
 ```
 
 #### Image
 `Use the image schema`
 
 ```jsx
-fancyPost.schema({
-  type: 'image',
+image: {
   fields: ['title', 'description', 'url', 'image']
-});
+}
 ```
 
 #### Create your own
 
 ```jsx
-fancyPost.schema({
-  type: 'video',
+video: {
   fields: ['title', 'description', 'url', 'image']
-});
+}
 ```
 
 ### Component: TypeHere

@@ -1,16 +1,16 @@
 import React from 'react';
-import getFormType from '../common/rules';
+import { getFormType } from '../settings/schema';
 
 export default (props) => {
   const { schema, defaultSchemaType } = props;
-  const userEntry = 'https://tenor.com/search/kitten-gifs hello kitty';
-  const FormType = getFormType(userEntry, schema);
+  const entry = 'https://tenor.com/search/kitten-gifs hello kitty';
+  const FormType = getFormType(entry, schema);
   return (
     <div>
       Form Type
       <div>
         {FormType
-            && <FormType />
+            && FormType
           }
         {!FormType && defaultSchemaType
             && <span>Default form type</span>
