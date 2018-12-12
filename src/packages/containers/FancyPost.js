@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TypeHere, Preview, FormType } from '../index';
+import './styles/styles.scss';
 
 class FancyPost extends Component {
   render() {
