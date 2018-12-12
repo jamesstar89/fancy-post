@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { TypeHere, Preview, FormType } from '../index';
-import './styles/styles.scss';
+import { Wrapper } from './styles/styled';
 
 class FancyPost extends Component {
   render() {
     const { settings } = this.props;
     return (
-      <div>
+      <Wrapper>
         <TypeHere
           preview={Preview}
         />
@@ -14,7 +14,7 @@ class FancyPost extends Component {
           settings={settings}
           defaultSchemaType="post"
         />
-      </div>
+      </Wrapper>
     );
   }
 }

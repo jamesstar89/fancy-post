@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { TextFieldEntry } from './styles/styled';
 
-export default (props) => {
-  const Preview = props.preview;
-  return (
-    <div>
-        Type here
-      <Preview />
-    </div>
-  );
-};
+class TypeHere extends Component {
+  render() {
+    const Preview = this.props.preview;
+    return (
+      <div>
+        <TextFieldEntry
+          onChange={() => {}}
+          placeholder="Type something"
+        />
+        <Preview />
+      </div>
+    );
+  }
+}
+
+export default TypeHere;

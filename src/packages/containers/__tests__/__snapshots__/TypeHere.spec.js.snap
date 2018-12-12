@@ -1,14 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TypeHere Should render 1`] = `
-<Component
+<TypeHere
   preview={[Function]}
 >
   <div>
-    Type here
+    <ForwardRef
+      onChange={[Function]}
+      placeholder="Type something"
+    >
+      <StyledComponent
+        forwardedClass={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": undefined,
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bwzfXH",
+              "isStatic": true,
+              "lastClassName": "gZQvbT",
+              "rules": Array [
+                "
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 0;
+  background: none;
+  color: white;
+  font-size: 70px;
+  outline: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  resize: none;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 10;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+  }
+",
+              ],
+            },
+            "displayName": "styled.textarea",
+            "render": [Function],
+            "styledComponentId": "sc-bwzfXH",
+            "target": "textarea",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        onChange={[Function]}
+        placeholder="Type something"
+      >
+        <textarea
+          className="sc-bwzfXH gZQvbT"
+          onChange={[Function]}
+          placeholder="Type something"
+        />
+      </StyledComponent>
+    </ForwardRef>
     <Preview>
       <div />
     </Preview>
   </div>
-</Component>
+</TypeHere>
 `;

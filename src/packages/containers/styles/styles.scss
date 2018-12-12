@@ -6,3 +6,51 @@ body {
 div, textarea, input {
 	font-family: arial;
 }
+
+.text-field-description {
+  background-color: white !important;
+  margin: 0 0 10px 0 !important;
+  border-radius: 5px;
+  textarea, input, div {
+    background-color: initial !important;
+    font-size: 25px;
+    & {
+      :hover,
+      :active,
+      :visited,
+      :focused {
+        background-color: initial !important;
+      }
+    }
+  }
+  div::before {
+    border-bottom: 0 !important;
+  }
+  div::after {
+  	display: none !important;
+  }
+  div:first-child {
+    border-radius: 5px !important;
+    margin: 0 !important;
+  }
+}
+
+.input-separator {
+  margin-bottom: 10px;
+}
+
+.save-button {
+  background: rgba(#7bb0ff, 0.3);
+  float: right;
+  font-size: 18px;
+  border: 0;
+  padding: 0 34px;
+  line-height: 30px;
+  margin: 0 0 15px 0;
+  border-radius: 25px;
+  color: rgba(#ffffff, 0.5);
+  &:hover {
+    background: rgba(#7bb0ff, 1);
+    color: rgba(#ffffff, 1);
+  }
+}
