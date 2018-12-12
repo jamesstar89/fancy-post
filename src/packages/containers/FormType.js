@@ -2,9 +2,9 @@ import React from 'react';
 import { getFormType } from '../settings/schema';
 
 export default (props) => {
-  const { schema, defaultSchemaType } = props;
+  const { settings, defaultSchemaType } = props;
   const entry = 'https://tenor.com/search/kitten-gifs hello kitty';
-  const FormType = getFormType(entry, schema);
+  const FormType = getFormType(entry, settings);
   return (
     <div>
       Form Type

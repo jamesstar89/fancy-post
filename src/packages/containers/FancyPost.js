@@ -4,14 +4,13 @@ import { TypeHere, Preview, FormType } from '../index';
 class FancyPost extends Component {
   render() {
     const { settings } = this.props;
-    const { schema } = settings;
     return (
       <div>
         <TypeHere
           preview={Preview}
         />
         <FormType
-          schema={schema}
+          settings={settings}
           defaultSchemaType="post"
         />
       </div>
