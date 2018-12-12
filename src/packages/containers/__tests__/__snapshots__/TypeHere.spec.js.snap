@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TypeHere Should render 1`] = `
+<Component
+  preview={[Function]}
+>
+  <div>
+    Type here
+    <Preview>
+      <div />
+    </Preview>
+  </div>
+</Component>
+`;

@@ -1,0 +1,58 @@
+{
+  "name": "fancy-post",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "jest src/** exit 0",
+    "lint": "./node_modules/.bin/eslint ./",
+    "lint:fix": "./node_modules/.bin/eslint ./ --fix --quiet",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "precommit": "npm run lint",
+    "prepush": "npm run test:coverage"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "prop-types": "15.6.2",
+    "ramda": "0.26.1",
+    "react": "16.6.0",
+    "react-app-rewired": "1.6.2",
+    "react-dom": "16.6.0",
+    "react-scripts": "2.1.1",
+    "react-test-renderer": "16.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "9.0.0",
+    "babel-jest": "23.6.0",
+    "babel-plugin-import": "1.11.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "enzyme": "3.6.0",
+    "enzyme-adapter-react-16": "1.5.0",
+    "enzyme-to-json": "3.3.4",
+    "eslint": "5.6.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1",
+    "husky": "1.2.0",
+    "jest": "23.6.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/config/test.setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}

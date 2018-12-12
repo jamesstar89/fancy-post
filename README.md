@@ -30,42 +30,38 @@ Use `Rules` in combination with `Schema` and `TypeHere` to help render which `Fo
 Create and use Schema types, there are 3 out-of-the-box schema types.
 
 #### Post
-`Use the Post schema.`
+`Use the post schema`
 
 ```jsx
-fancyPost.schema({
-  type: 'post',
-  fields: [‘title', 'description', 'url', 'image']
-});
+post: {
+  fields: ['title', 'description', 'url', 'image']
+}
 ```
 
 #### Web Url
-`Use the Web Url schema.`
+`Use the weburl schema`
 
 ```jsx
-fancyPost.schema({
-  type: 'weburl',
-  fields: [‘title', 'description', 'url', 'image']
-});
+weburl: {
+  fields: ['title', 'description', 'url', 'image']
+}
 ```
 
 #### Image
-`Use the Image schema.`
+`Use the image schema`
 
 ```jsx
-fancyPost.schema({
-  type: 'image',
+image: {
   fields: ['title', 'description', 'url', 'image']
-});
+}
 ```
 
 #### Create your own
 
 ```jsx
-fancyPost.schema({
-  type: 'video',
+video: {
   fields: ['title', 'description', 'url', 'image']
-});
+}
 ```
 
 ### Component: TypeHere
@@ -90,26 +86,16 @@ fancyPost.schema({
 | default | string | String for Schema types, such as: post, weburl or image |
 
 ## Example
-```jsx
-import React, { Component } from 'react';
-import { TypeHere, Preview, FormType } from '../index.js';
-import { Wrapper } from './styles/js/styled';
-import './styles/scss/styles.scss';
+`./src/index`
 
-class App extends Component {
-  render() {
-    return (
-      <Wrapper>
-        <TypeHere
-          preview={Preview}
-        />
-        <FormType default="post" />
-      </Wrapper>
-    );
-  }
+```jsx
+import FancyPost from './packages/containers/FancyPost';
+
+const settings = {
+  schema: 'weburl,post,image',
 }
 
-export default App;
+<FancyPost settings={settings} />
 ```
 
 By Puff Stream 🚀🐳, 2018

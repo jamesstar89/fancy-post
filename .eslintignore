@@ -1,0 +1,4 @@
+serviceWorker.js
+build/
+coverage/
+public/
