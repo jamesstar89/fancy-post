@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Input } from 'antd';
+import TextField from '@material-ui/core/TextField';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import FancyPost from './packages/containers/FancyPost';
 import { isPost, isImage, isUrl } from './packages/settings/isType';
 import * as serviceWorker from './serviceWorker';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#666666'
+    },
+  },
+});
 
 const settings = {
   schema: [
@@ -18,7 +29,7 @@ const settings = {
       fields: ['title', 'description', 'url', 'image']
     },
     weburl: {
-      fields: ['title', 'description', 'url', 'image']
+      fields: ['description', 'title', 'url']
     },
   },
   rules: {
@@ -27,10 +38,40 @@ const settings = {
     weburl: isUrl
   },
   templates: {
-    title: <div key="title">Title field</div>,
-    description: <div key="description">Description field</div>,
-    url: <div key="url">Url field</div>,
-    image: <div key="image">Image field</div>,
+    title: <Input
+      size="large"
+      className="input-separator"
+      key="title"
+      placeholder="Title"
+    />,
+    description:
+  <MuiThemeProvider
+    key="description"
+    theme={theme}
+  >
+    <TextField
+      multiline
+      rowsMax="12"
+      fullWidth
+      label="Description"
+      className="text-field-description"
+      onChange={() => {}}
+      margin="normal"
+      variant="filled"
+    />
+  </MuiThemeProvider>,
+    url: <Input
+      size="large"
+      className="input-separator"
+      key="weburl"
+      placeholder="Web Url"
+    />,
+    image: <Input
+      size="large"
+      className="input-separator"
+      key="imageurl"
+      placeholder="Image Url"
+    />,
   }
 };
 
