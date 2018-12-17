@@ -5,7 +5,7 @@ const applyRules = (entry, settings) => settings.schema.filter((schemaType) => {
   return true;
 }).map(type => ({
   types: settings.types[type],
-  templates: settings.templates
+  templates: settings.templates,
 }));
 
 const fields = (fieldTypeSchema) => {
@@ -16,6 +16,7 @@ const fields = (fieldTypeSchema) => {
   return false;
 };
 
+// eslint-disable-next-line
 export const getFormType = (entry, settings) => fields(applyRules(entry, settings));
 
 export default getFormType;

@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { typeHereAction } from '../redux/actions';
 import { TextFieldEntry } from './styles/styled';
 
-class TypeHere extends Component {
+export class TypeHere extends Component {
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(e) {
+    const { value } = e.target;
+    if (value.length > 3) {
+      this.props.typeHereAction(value);
+    }
+  }
+
   render() {
-    const Preview = this.props.preview;
+    const { preview } = this.props;
+    const Preview = preview;
     return (
       <div>
         <TextFieldEntry
-          onChange={() => {}}
+          onChange={this.onChange}
           placeholder="Type something"
         />
         <Preview />
@@ -16,4 +32,11 @@ class TypeHere extends Component {
   }
 }
 
-export default TypeHere;
+const mapDispatchToProps = dispatch => bindActionCreators(
+  {
+    typeHereAction,
+  },
+  dispatch
+);
+
+export default connect(undefined, mapDispatchToProps)(TypeHere);

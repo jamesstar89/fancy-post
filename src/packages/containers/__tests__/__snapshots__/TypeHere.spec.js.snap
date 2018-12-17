@@ -17,7 +17,7 @@ exports[`TypeHere Should render 1`] = `
             "componentStyle": ComponentStyle {
               "componentId": "sc-bwzfXH",
               "isStatic": true,
-              "lastClassName": "gZQvbT",
+              "lastClassName": "hKfPlW",
               "rules": Array [
                 "
   -webkit-appearance: none;
@@ -35,8 +35,8 @@ exports[`TypeHere Should render 1`] = `
   overflow: hidden;
   resize: none;
   position: absolute;
-  top: 20px;
-  left: 30px;
+  top: 0;
+  left: 10px;
   z-index: 10;
 
   &::placeholder {
@@ -59,7 +59,7 @@ exports[`TypeHere Should render 1`] = `
         placeholder="Type something"
       >
         <textarea
-          className="sc-bwzfXH gZQvbT"
+          className="sc-bwzfXH hKfPlW"
           onChange={[Function]}
           placeholder="Type something"
         />
