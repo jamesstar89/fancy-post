@@ -39,6 +39,14 @@ div, textarea, input {
   margin-bottom: 10px;
 }
 
+.preview-image-animation {
+  background-color: white;
+  color: black;
+  height: 300px;
+  transform: scale(1);
+  opacity: 1;
+}
+
 .save-button {
   background: rgba(#7bb0ff, 0.3);
   float: right;

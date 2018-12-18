@@ -1,34 +1,39 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
 import { Button } from 'antd';
 import { getFormType } from '../settings/schema';
 import { SwitchGroup, SwitchStyled } from './styles/styled';
 import './styles/styles.scss';
 
-export default (props) => {
-  const { settings, defaultSchemaType } = props;
+const Spacer = styled.span`
+  width: 7px;
+  display: inline-block;
+`;
+
+const FormType = (props) => {
+  const { settings, typeHereValue, defaultSchemaType } = props;
   const entry = 'https://tenor.com/search/kitten-gifs hello kitty';
-  const FormType = getFormType(entry, settings);
+  const renderFormType = getFormType(entry, settings);
+
+  if (!typeHereValue) {
+    return <div />;
+  }
+
   return (
     <div>
       <SwitchGroup>
-        Title
-        {' '}
-        <SwitchStyled
-          size="small"
-          defaultChecked
-        />
-        {' '}
-        Description
-        {' '}
+        Show Title
+        <Spacer />
         <SwitchStyled
           size="small"
           defaultChecked
         />
       </SwitchGroup>
-      {FormType
-          && FormType
+      {renderFormType
+          && renderFormType
         }
-      {!FormType && defaultSchemaType
+      {!renderFormType && defaultSchemaType
           && <span>Default form type</span>
         }
       <Button
@@ -41,3 +46,9 @@ export default (props) => {
     </div>
   );
 };
+
+const mapStateToProps = state => ({
+  typeHereValue: state.typeHereValue,
+});
+
+export default connect(mapStateToProps, undefined)(FormType);

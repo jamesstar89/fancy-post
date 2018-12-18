@@ -3,6 +3,7 @@ import { Dropdown, Button, Switch } from 'antd';
 
 export const Wrapper = styled.div`
   width: 900px;
+  position: relative;
 `;
 
 export const TextFieldEntry = styled.textarea`
@@ -21,8 +22,8 @@ export const TextFieldEntry = styled.textarea`
   overflow: hidden;
   resize: none;
   position: absolute;
-  top: 20px;
-  left: 30px;
+  top: 0;
+  left: 10px;
   z-index: 10;
 
   &::placeholder {
@@ -50,12 +51,12 @@ export const PreviewWrapper = styled.div`
 
 export const Image = styled.div`
   height: 300px;
-  transform: scale(1);
+  transform: scale(1.2);
   background: url(https://hips.hearstapps.com/roa.h-cdn.co/assets/17/18/1493919111-roa060117fea-raptor13.jpg?crop=1xw:1xh;center,top&resize=4716:*);
   background-size: cover;
   -webkit-transition: all 1s;
   transition: all 1s;
-  opacity: 1;
+  opacity: 0;
   border-radius: 5px;
   margin-bottom: 10px;
 `;

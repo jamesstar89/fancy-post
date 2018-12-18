@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Menu, Icon } from 'antd';
+import { typeHereAction } from '../redux/actions';
 import {
   PreviewWrapper,
   Image,
@@ -17,19 +20,37 @@ const menu = (
 
 class Preview extends Component {
   render() {
+    const { typeHereValue } = this.props;
+    const className = typeHereValue
+      ? 'preview-image-animation' : '';
     return (
       <PreviewWrapper>
-        <Image />
-        <DropdownStyled trigger={['click']} overlay={menu}>
-          <ButtonStyled>
-              Type as: Post
-            {' '}
-            <Icon type="down" />
-          </ButtonStyled>
-        </DropdownStyled>
+        <Image className={className} />
+        {typeHereValue
+          && (
+          <DropdownStyled trigger={['click']} overlay={menu}>
+            <ButtonStyled>
+                Type as: Post
+              {' '}
+              <Icon type="down" />
+            </ButtonStyled>
+          </DropdownStyled>
+          )
+        }
       </PreviewWrapper>
     );
   }
 }
 
-export default Preview;
+const mapStateToProps = state => ({
+  typeHereValue: state.typeHereValue,
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators(
+  {
+    typeHereAction,
+  },
+  dispatch
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Preview);
