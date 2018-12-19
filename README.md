@@ -30,7 +30,7 @@ npm start
 ```
 
 ## Usage
-To use it, just provide it with a settings configuration object of `schema`, `types`, `rules` and `templates`.
+To use it, just provide a settings configuration object with `schema`, `types`, `rules` and `templates`.
 
 `./src/packages/containers/FancyPost`
 
