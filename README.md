@@ -68,8 +68,8 @@ Use `rules` in combination with `schema` and `TypeHere` to help determine which 
 
 ## API
 
-### Schema types
-Create and use Schema types, there are 3 out-of-the-box schema types.
+### Schema
+Create and use schema types, there are 3 out-of-the-box schema types.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
@@ -103,7 +103,5 @@ post: {
 | ------ | ------ | ------ |
 | settings | Object | Set settings/schema config |
 | defaultSchemaType | String | Set default schema type |
-
-Contributions are welcome.
 
 By Puff Stream 🚀🐳, 2018
