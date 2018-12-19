@@ -71,7 +71,14 @@ Use `rules` in combination with `schema` and `TypeHere` to help determine which 
 ### Schema types
 Create and use Schema types, there are 3 out-of-the-box schema types.
 
-`post` schema
+| Property | Type | Description |
+| ------ | ------ | ------ |
+| post | Object | `fields` Object with Array of field types |
+| weburl | Object | `fields` Object with Array of field types |
+| image | Object | `fields` Object with Array of field types |
+| custom | Object | Create your own custom field types |
+
+Code example
 
 ```jsx
 post: {
@@ -79,50 +86,23 @@ post: {
 }
 ```
 
-`weburl` schema
+### Components
 
-```jsx
-weburl: {
-  fields: ['title', 'description', 'url', 'image']
-}
-```
-
-`image` schema
-
-```jsx
-image: {
-  fields: ['title', 'description', 'url', 'image']
-}
-```
-
-#### Create your own
-
-```jsx
-video: {
-  fields: ['title', 'description', 'url', 'image']
-}
-```
-
-### Component: TypeHere
-`import {  TypeHere } from '../index.js';`
-
-| Name | Type | Description |
+#### TypeHere
+| Property | Type | Description |
 | ------ | ------ | ------ |
-| preview | component | Render TypeHere results |
+| preview | Component | Initial text entry, `Hello kitty` |
 
-### Component: Preview
-`import {  Preview } from '../index.js';`
-
-| Name | Type | Description |
+#### Preview
+| Property | Type | Description |
 | ------ | ------ | ------ |
-| showResponsive | prop | Show render at width 400px |
+| responsiveSize | Object | Set responsive size of preview |
 
-### Component: FormType
-`import {  FormType } from '../index.js';`
-
-| Name | Type | Description |
+#### FormType
+| Property | Type | Description |
 | ------ | ------ | ------ |
-| default | string | String for Schema types, such as: post, weburl or image |
+| settings | Object | Set settings/schema config |
+| defaultSchemaType | String | Set default schema type |
 
 Contributions are welcome.
 By Puff Stream 🚀🐳, 2018
