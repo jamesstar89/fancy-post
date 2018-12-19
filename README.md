@@ -78,7 +78,7 @@ Create and use schema types, there are 3 out-of-the-box schema types.
 | image | Object | `fields` Object with Array of field types |
 | custom | Object | Create your own custom field types |
 
-Code example:
+#### Example
 
 ```jsx
 post: {
