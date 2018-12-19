@@ -1,8 +1,7 @@
 # Fancy post
+Fancy post is a modern post editor for your modern React app. Created and maintained by James Star at [Puff Stream](https://www.puffstream.com).
 
-![Fancy post](screenshots/fancy-post-example-1.png) <!-- .element height="100%" width="100%" -->
-
-Fancy post is a modern post editor for your modern React app. Created and maintained by James Star at puffstream.com.
+<img src="screenshots/fancy-post-example-1.png" title="fancy-post"/> <!-- .element height="100%" width="100%" -->
 
 Type "hello kitty" into the large entry field and Fancy post `rules` in combination with `schema` will help determine which `FormType` to render, such as, `post`, `weburl` or `image`. After this, fine-tune your form details and click Save.
 
