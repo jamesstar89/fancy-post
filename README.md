@@ -91,12 +91,12 @@ post: {
 #### TypeHere
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| preview | Component | Initial text entry, `Hello kitty` |
+| preview | Component | Show preview of `TypeHere` |
 
 #### Preview
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| responsiveSize | Object | Set responsive size of preview |
+| responsiveSize | Object | Set responsive size (phone/tablet/desktop) of preview |
 
 #### FormType
 | Property | Type | Description |
