@@ -91,12 +91,12 @@ post: {
 #### TypeHere
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| preview | Component | Show preview of `TypeHere` |
+| preview | Component | Show preview of `TypeHere` results |
 
 #### Preview
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| responsiveSize | Object | Set responsive size (phone/tablet/desktop) of preview |
+| responsiveSize | String | Set responsive size to small, medium or large |
 
 #### FormType
 | Property | Type | Description |
