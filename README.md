@@ -3,7 +3,7 @@ Fancy post is a modern post editor for your modern React app. Created and mainta
 
 <img src="screenshots/fancy-post-example-1.png" title="fancy-post"/> <!-- .element height="100%" width="100%" -->
 
-Type "hello kitty" into the large entry field and Fancy post `rules` in combination with `schema` will help determine which `FormType` to render, such as, `post`, `weburl` or `image`. After this, fine-tune your form details and click Save.
+Type "hello kitty" and Fancy post `schema` in combination with `rules` will help determine which `FormType` will render, such as, `post`, `weburl` or `image`. After this, fine-tune your form details and click Save.
 
 To get started, read the documentation and guidelines below.
 
@@ -64,7 +64,7 @@ const settings = typeHereValue => ({
 This library leverages a few different library styles and patterns, such as `Ant Design`, `Material UI`, `SASS` and `BEM (Block Element and Modifier)`.
 
 ## Rules
-Use `rules` in combination with `schema` and `TypeHere` to help determine which `FormType` will render. If user types, `https://tenor.com/search/kitten-gifs hello kitty`, then the `weburl` `FormType` will be rendered.
+Use `schema` in combination with `rules` to help determine which `FormType` will render. If user types, `https://tenor.com/search/kitten-gifs hello kitty`, then the `weburl` `FormType` will be rendered.
 
 ## API
 
