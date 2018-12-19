@@ -105,4 +105,5 @@ post: {
 | defaultSchemaType | String | Set default schema type |
 
 Contributions are welcome.
+
 By Puff Stream 🚀🐳, 2018
