@@ -6,18 +6,23 @@ exports[`TypeHere Should render 1`] = `
 >
   <div>
     <ForwardRef
+      debounceTimeout={300}
+      minLength={2}
       onChange={[Function]}
       placeholder="Type something"
+      type="text"
     >
       <StyledComponent
+        debounceTimeout={300}
         forwardedClass={
           Object {
             "$$typeof": Symbol(react.forward_ref),
+            "DebounceInput": [Function],
             "attrs": undefined,
             "componentStyle": ComponentStyle {
               "componentId": "sc-bwzfXH",
               "isStatic": true,
-              "lastClassName": "hKfPlW",
+              "lastClassName": "cCuXgX",
               "rules": Array [
                 "
   -webkit-appearance: none;
@@ -31,13 +36,13 @@ exports[`TypeHere Should render 1`] = `
   font-size: 70px;
   outline: 0;
   width: 100%;
-  height: 300px;
   overflow: hidden;
   resize: none;
   position: absolute;
   top: 0;
   left: 10px;
   z-index: 10;
+  line-height: 0;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.2);
@@ -45,24 +50,43 @@ exports[`TypeHere Should render 1`] = `
 ",
               ],
             },
-            "displayName": "styled.textarea",
+            "displayName": "Styled(DebounceInput)",
             "render": [Function],
             "styledComponentId": "sc-bwzfXH",
-            "target": "textarea",
+            "target": [Function],
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           }
         }
         forwardedRef={null}
+        minLength={2}
         onChange={[Function]}
         placeholder="Type something"
+        type="text"
       >
-        <textarea
-          className="sc-bwzfXH hKfPlW"
+        <DebounceInput
+          className="sc-bwzfXH cCuXgX"
+          debounceTimeout={300}
+          element="input"
+          forceNotifyByEnter={true}
+          forceNotifyOnBlur={true}
+          minLength={2}
           onChange={[Function]}
           placeholder="Type something"
-        />
+          type="text"
+        >
+          <input
+            className="sc-bwzfXH cCuXgX"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Type something"
+            type="text"
+            value=""
+          />
+        </DebounceInput>
       </StyledComponent>
     </ForwardRef>
     <Preview>
