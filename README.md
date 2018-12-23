@@ -89,8 +89,8 @@ Tiny utility library to validate string value is of a type.
 | Property | Available | Type | Description |
 | ------ | ------ | ------ | ------ |
 | preview | Y | function | Show `TypeHere` results |
-| formTemplate | Y | Object | Set formTemplate from `./templates` |
-| responsiveSize | - | String | Set `preview` size to small, medium or large |
-| defaultType | - | String | Set default type |
+| formTemplate | Y | object | Set formTemplate from `./templates` |
+| responsiveSize | - | string | Set `preview` size to small, medium or large |
+| defaultType | - | string | Set default type |
 
 By Puff Stream 🚀🐳, 2018
