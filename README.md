@@ -8,7 +8,7 @@ Type "hello kitty" and Fancy post will return the most suitable form for your po
 To get started, read the documentation and guidelines below.
 
 ## Motivation
-With Facebook, YouTube and WordPress giving you the power to publish your own content, this library will help you implement a front-end UI, that can be hooked into a variety of backend solutions like Firebase.
+With Facebook, YouTube and WordPress giving you the power to publish your own content, this library will help you implement a front-end UI, that can be hooked into a variety of backend solutions, like Firebase.
 
 ## Supported React versions
 This package requires React 16.6.0 and higher.
@@ -37,14 +37,19 @@ To use it, import `FancyPost` and set `formTemplate` prop.
 
 ```jsx
 import FancyPost from './packages/containers/FancyPost';
-import { formTemplate } from './packages/templates/templates';
+import * as formProps from './packages/forms/formTemplate';
+import AddOptions from './packages/forms/helpers/AddOptions';
 
-<FancyPost formTemplate={formTemplate} />
+<FancyPost
+  previewAddons={formProps.previewAddons}
+  formTemplate={formProps.formTemplate}
+  addOptions={AddOptions}
+/>
 ```
 
 You can optionally customise `./templates`.
 
-`./src/packages/templates/templates`
+`./src/packages/forms/utils/templates`
 
 ```jsx
 const postTempate = typeHereValue => {
@@ -59,26 +64,14 @@ const imageTemplate = typeHereValue => {
   // return image form
 }
 
-export const formTemplate = (formRules, typeHereValue) => {
-  if (isValueType.isPost(typeHereValue)) {
-    return postTemplate(typeHereValue);
-  }
-  if (isValueType.isUrl(typeHereValue)) {
-    return urlTempate(typeHereValue);
-  }
-  if (isValueType.isImage(typeHereValue)) {
-    return imageTemplate(typeHereValue);
-  }
-};
-
-export default formTemplate;
+export default postTempate;
 ```
 
 ## Styles
 This library leverages a few different library styles and patterns, such as `Ant Design`, `Material UI`, `SASS` and `BEM (Block Element and Modifier)`.
 
 ## isValueType
-Tiny utility library to validate string value is of type.
+A utility library to help validate string value is of type.
 
 * `hello world` returns `post`
 * `https://www.puffstream.com` returns `url`
@@ -89,7 +82,9 @@ Tiny utility library to validate string value is of type.
 | Property | Available | Type | Description |
 | ------ | ------ | ------ | ------ |
 | preview | Y | function | Show `TypeHere` results |
-| formTemplate | Y | object | Set formTemplate from `./templates` |
+| previewAddons | Y | function | Show additional preview options |
+| formTemplate | Y | object | Set formTemplate from `templates` |
+| addOptions | Y | function | Show additional form options |
 | responsiveSize | - | string | Set `preview` size to small, medium or large |
 | defaultType | - | string | Set default type |
 

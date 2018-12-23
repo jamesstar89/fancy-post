@@ -3,4 +3,12 @@ export const typeHereAction = value => ({
   value,
 });
 
-export default typeHereAction;
+export const activeOptionAction = activeOption => ({
+  type: 'ACTIVE_OPTION',
+  activeOption,
+});
+
+export default {
+  typeHereAction,
+  activeOptionAction
+};

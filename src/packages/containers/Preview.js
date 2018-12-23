@@ -9,11 +9,12 @@ import {
 
 class Preview extends Component {
   render() {
-    const { typeHereValue } = this.props;
+    const { typeHereValue, previewAddons } = this.props;
     const className = typeHereValue
       ? 'preview-image-animation' : '';
     return (
       <PreviewWrapper>
+        {previewAddons(typeHereValue)}
         <Image className={className} />
       </PreviewWrapper>
     );
@@ -21,7 +22,7 @@ class Preview extends Component {
 }
 
 const mapStateToProps = state => ({
-  typeHereValue: state.typeHereValue,
+  typeHereValue: state.typeHereReducer.typeHereValue,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(
