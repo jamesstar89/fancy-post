@@ -20,11 +20,15 @@ export class TypeHere extends Component {
   render() {
     const { preview } = this.props;
     const Preview = preview;
+
     return (
       <div>
         <TextFieldEntry
-          onChange={this.onChange}
+          type="text"
           placeholder="Type something"
+          minLength={2}
+          debounceTimeout={300}
+          onChange={this.onChange}
         />
         <Preview />
       </div>

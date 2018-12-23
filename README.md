@@ -1,14 +1,14 @@
 # Fancy post
-Fancy post is a modern post editor for your modern React app. Created and maintained by James Star at [Puff Stream](https://www.puffstream.com).
+Fancy post is a modern post editor. Created and maintained by James Star at [Puff Stream](https://www.puffstream.com).
 
 <img src="screenshots/fancy-post-example-1.png" title="fancy-post"/> <!-- .element height="100%" width="100%" -->
 
-Type "hello kitty" and Fancy post `schema` in combination with `rules` will help determine which `FormType` will render, such as, `post`, `weburl` or `image`. After this, fine-tune your form details and click Save.
+Type "hello kitty" and Fancy post will return the most suitable form for your post entry, such as, `Post`, `Web url`, or `Image`. 
 
 To get started, read the documentation and guidelines below.
 
 ## Motivation
-With Facebook, YouTube and more services giving you the power to publish user driven content like posts and videos, this library will help you implement `Fancy post` so your users can get excited about publishing their own content through your app.
+With Facebook, YouTube and WordPress giving you the power to publish your own content, this library will help you implement a front-end UI, that can be hooked into a variety of backend solutions, example, Firebase.
 
 ## Supported React versions
 This package requires React 16.6.0 and higher.
@@ -22,6 +22,7 @@ If you are creating an open source application under a license compatible with t
 
 ## Quick start
 Get a quick start into `Fancy post`
+
 ```jsx
 git clone git@github.com:puffstream/fancy-post.git
 cd fancy-post
@@ -30,78 +31,66 @@ npm start
 ```
 
 ## Usage
-To use it, just provide a settings configuration object with `schema`, `types`, `rules` and `templates`.
+To use it, import `FancyPost` and set `formTemplate` prop.
 
-`./src/packages/containers/FancyPost`
+`./src/index`
 
 ```jsx
 import FancyPost from './packages/containers/FancyPost';
+import { formTemplate } from './packages/templates/templates';
 
-const settings = typeHereValue => ({
-  schema: [
-    'post',
-  ],
-  types: {
-    post: {
-      fields: ['title', 'description', 'url', 'image']
-    },
-  },
-  rules: {
-    post: isPost,
-  },
-  templates: {
-    title: <Input/>,
-    description: <TextField value={typeHereValue}/>,
-    url: <Input/>,
-    image: <Input/>,
+<FancyPost formTemplate={formTemplate} />
+```
+
+You can optionally customise `./templates`.
+
+`./src/packages/templates/templates`
+
+```jsx
+const postTempate = typeHereValue => {
+  // return post form
+}
+
+const urlTempate = typeHereValue => {
+  // return web url form
+}
+
+const imageTemplate = typeHereValue => {
+  // return image form
+}
+
+export const formTemplate = (formRules, typeHereValue) => {
+  if (isValueType.isPost(typeHereValue)) {
+    return postTemplate(typeHereValue);
   }
-});
+  if (isValueType.isUrl(typeHereValue)) {
+    return urlTempate(typeHereValue);
+  }
+  if (isValueType.isImage(typeHereValue)) {
+    return imageTemplate(typeHereValue);
+  }
+};
 
-<FancyPost settings={settings} />
+export default formTemplate;
 ```
 
 ## Styles
 This library leverages a few different library styles and patterns, such as `Ant Design`, `Material UI`, `SASS` and `BEM (Block Element and Modifier)`.
 
-## Rules
-Use `schema` in combination with `rules` to help determine which `FormType` will render. If user types, `https://tenor.com/search/kitten-gifs hello kitty`, then the `weburl` `FormType` will be rendered.
+## isValueType
+Tiny utility library to validate string value is of a type.
 
-## API
+* `hello world` returns `post`
+* `https://www.puffstream.com` returns `url`
+* `image.png` returns `image`
 
-### Schema
-Create and use schema types, there are 3 out-of-the-box schema types.
+## Props
 
-| Property | Type | Description |
-| ------ | ------ | ------ |
-| post | Object | `fields` Object with Array of field types |
-| weburl | Object | `fields` Object with Array of field types |
-| image | Object | `fields` Object with Array of field types |
-| custom | Object | Create your own custom field types |
-
-#### Code example
-
-```jsx
-post: {
-  fields: ['title', 'description', 'url', 'image']
-}
-```
-
-### Components
-
-#### TypeHere
-| Property | Type | Description |
-| ------ | ------ | ------ |
-| preview | Component | Show preview of `TypeHere` results |
-
-#### Preview
-| Property | Type | Description |
-| ------ | ------ | ------ |
-| responsiveSize | String | Set responsive size to small, medium or large |
-
-#### FormType
-| Property | Type | Description |
-| ------ | ------ | ------ |
-| settings | Object | Set settings/schema config |
-| defaultSchemaType | String | Set default schema type |
+| Property | Available | Type | Description |
+| ------ | ------ | ------ | ------ |
+| preview | Y | function | Show `TypeHere` results |
+| formTemplate | Y | Object | Set formTemplate from `./templates` |
+| responsiveSize | - | String | Set `preview` size to small, medium or large |
+| defaultType | - | String | Set default type |
 
 By Puff Stream 🚀🐳, 2018
