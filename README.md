@@ -8,7 +8,7 @@ Type "hello kitty" and Fancy post will return the most suitable form for your po
 To get started, read the documentation and guidelines below.
 
 ## Motivation
-With Facebook, YouTube and WordPress giving you the power to publish your own content, this library will help you implement a front-end UI, that can be hooked into a variety of backend solutions like Firebase.
+With Facebook, YouTube and WordPress giving you the power to publish your own content, this library will help you implement a front-end UI, that can be hooked into a variety of backend solutions, like Firebase.
 
 ## Supported React versions
 This package requires React 16.6.0 and higher.
