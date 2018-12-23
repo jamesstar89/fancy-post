@@ -3,12 +3,12 @@ Fancy post is a modern post editor. Created and maintained by James Star at [Puf
 
 <img src="screenshots/fancy-post-example-1.png" title="fancy-post"/> <!-- .element height="100%" width="100%" -->
 
-Type "hello kitty" and Fancy post will return the most suitable form for your post entry, such as, `Post`, `Web url`, or `Image`. 
+Type "hello kitty" and Fancy post will return the most suitable form for your post entry, such as, `Post`, `Web url` or `Image`. 
 
 To get started, read the documentation and guidelines below.
 
 ## Motivation
-With Facebook, YouTube and WordPress giving you the power to publish your own content, this library will help you implement a front-end UI, that can be hooked into a variety of backend solutions, example, Firebase.
+With Facebook, YouTube and WordPress giving you the power to publish your own content, this library will help you implement a front-end UI, that can be hooked into a variety of backend solutions like Firebase.
 
 ## Supported React versions
 This package requires React 16.6.0 and higher.
@@ -78,7 +78,7 @@ export default formTemplate;
 This library leverages a few different library styles and patterns, such as `Ant Design`, `Material UI`, `SASS` and `BEM (Block Element and Modifier)`.
 
 ## isValueType
-Tiny utility library to validate string value is of a type.
+Tiny utility library to validate string value is of type.
 
 * `hello world` returns `post`
 * `https://www.puffstream.com` returns `url`
