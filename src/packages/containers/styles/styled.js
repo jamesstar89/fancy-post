@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import { DebounceInput } from 'react-debounce-input';
 
-export const Wrapper = styled.div`
+export const FancyPostContainer = styled.div`
   width: 900px;
+  padding: 20px;
+`;
+
+export const TypeHereContainer = styled.div`
   position: relative;
 `;
 
@@ -15,16 +19,18 @@ export const TextFieldEntry = styled(DebounceInput)`
   border: 0;
   background: none;
   color: white;
-  font-size: 70px;
   outline: 0;
-  width: 100%;
+  width: calc(100% - 15px);
   overflow: hidden;
   resize: none;
   position: absolute;
-  top: 0;
-  left: 10px;
+  top: 10px;
+  left: 15px;
   z-index: 10;
-  line-height: 0;
+  height: 280px;
+  line-height: 70px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.2);
@@ -48,4 +54,8 @@ export const Image = styled.div`
   opacity: 0;
   border-radius: 5px;
   margin-bottom: 10px;
+`;
+
+export const ButtonContainer = styled.div`
+  text-align: right;
 `;

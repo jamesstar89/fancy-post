@@ -4,27 +4,64 @@ exports[`TypeHere Should render 1`] = `
 <TypeHere
   preview={[Function]}
 >
-  <div>
-    <ForwardRef
-      debounceTimeout={300}
-      minLength={2}
-      onChange={[Function]}
-      placeholder="Type something"
-      type="text"
+  <ForwardRef>
+    <StyledComponent
+      forwardedClass={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": undefined,
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": true,
+            "lastClassName": "ghuPdm",
+            "rules": Array [
+              "
+  position: relative;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <StyledComponent
-        debounceTimeout={300}
-        forwardedClass={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "DebounceInput": [Function],
-            "attrs": undefined,
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bwzfXH",
-              "isStatic": true,
-              "lastClassName": "cCuXgX",
-              "rules": Array [
-                "
+      <div
+        className="sc-bwzfXH ghuPdm"
+      >
+        <ForwardRef
+          debounceTimeout={300}
+          element="textarea"
+          minLength={2}
+          onChange={[Function]}
+          placeholder="Type something"
+          style={
+            Object {
+              "fontSize": "40px",
+              "lineHeight": "40px",
+            }
+          }
+          type="text"
+        >
+          <StyledComponent
+            debounceTimeout={300}
+            element="textarea"
+            forwardedClass={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "DebounceInput": [Function],
+                "attrs": undefined,
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htpNat",
+                  "isStatic": true,
+                  "lastClassName": "pntFT",
+                  "rules": Array [
+                    "
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -33,65 +70,87 @@ exports[`TypeHere Should render 1`] = `
   border: 0;
   background: none;
   color: white;
-  font-size: 70px;
   outline: 0;
-  width: 100%;
+  width: calc(100% - 15px);
   overflow: hidden;
   resize: none;
   position: absolute;
-  top: 0;
-  left: 10px;
+  top: 10px;
+  left: 15px;
   z-index: 10;
-  line-height: 0;
+  height: 280px;
+  line-height: 70px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.2);
   }
 ",
-              ],
-            },
-            "displayName": "Styled(DebounceInput)",
-            "render": [Function],
-            "styledComponentId": "sc-bwzfXH",
-            "target": [Function],
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-            Symbol(Symbol.hasInstance): [Function],
-          }
-        }
-        forwardedRef={null}
-        minLength={2}
-        onChange={[Function]}
-        placeholder="Type something"
-        type="text"
-      >
-        <DebounceInput
-          className="sc-bwzfXH cCuXgX"
-          debounceTimeout={300}
-          element="input"
-          forceNotifyByEnter={true}
-          forceNotifyOnBlur={true}
-          minLength={2}
-          onChange={[Function]}
-          placeholder="Type something"
-          type="text"
-        >
-          <input
-            className="sc-bwzfXH cCuXgX"
-            onBlur={[Function]}
+                  ],
+                },
+                "displayName": "Styled(DebounceInput)",
+                "render": [Function],
+                "styledComponentId": "sc-htpNat",
+                "target": [Function],
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
+            }
+            forwardedRef={null}
+            minLength={2}
             onChange={[Function]}
-            onKeyDown={[Function]}
             placeholder="Type something"
+            style={
+              Object {
+                "fontSize": "40px",
+                "lineHeight": "40px",
+              }
+            }
             type="text"
-            value=""
-          />
-        </DebounceInput>
-      </StyledComponent>
-    </ForwardRef>
-    <Preview>
-      <div />
-    </Preview>
-  </div>
+          >
+            <DebounceInput
+              className="sc-htpNat pntFT"
+              debounceTimeout={300}
+              element="textarea"
+              forceNotifyByEnter={true}
+              forceNotifyOnBlur={true}
+              minLength={2}
+              onChange={[Function]}
+              placeholder="Type something"
+              style={
+                Object {
+                  "fontSize": "40px",
+                  "lineHeight": "40px",
+                }
+              }
+              type="text"
+            >
+              <textarea
+                className="sc-htpNat pntFT"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Type something"
+                style={
+                  Object {
+                    "fontSize": "40px",
+                    "lineHeight": "40px",
+                  }
+                }
+                type="text"
+                value=""
+              />
+            </DebounceInput>
+          </StyledComponent>
+        </ForwardRef>
+        <Preview>
+          <div />
+        </Preview>
+      </div>
+    </StyledComponent>
+  </ForwardRef>
 </TypeHere>
 `;

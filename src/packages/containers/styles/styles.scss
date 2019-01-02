@@ -1,19 +1,18 @@
 body {
 	background: #4984e3;
- 	padding: 30px;
 }
 
 div, textarea, input {
-	font-family: arial;
+	font-family: roboto;
 }
 
 .text-field-description {
   background-color: white !important;
-  margin: 0 0 10px 0 !important;
+  margin: 0 !important;
   border-radius: 5px;
   textarea, input, div {
     background-color: initial !important;
-    font-size: 25px;
+    font-size: 16px;
     & {
       :hover,
       :active,
@@ -48,17 +47,22 @@ div, textarea, input {
 }
 
 .save-button {
-  background: rgba(#7bb0ff, 0.3);
-  float: right;
-  font-size: 18px;
+  background: white;
+  font-size: 16px;
   border: 0;
-  padding: 0 34px;
-  line-height: 30px;
+  padding: 0 25px;
+  line-height: 16px;
+  height: 35px;
   margin: 0 0 15px 0;
   border-radius: 25px;
-  color: rgba(#ffffff, 0.5);
+  color: #4984e3;
+
   &:hover {
-    background: rgba(#7bb0ff, 1);
-    color: rgba(#ffffff, 1);
+    background: white;
+    color: #4984e3;
   }
+}
+
+.ant-btn.ant-btn-primary.christmas:before {
+  display: none!important;
 }

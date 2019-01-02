@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { TypeHere, Preview, FormType } from './index';
-import { Wrapper } from './styles/styled';
+import CopyAndPasteOptions from './helpers/CopyAndPasteOptions';
+import { FancyPostContainer } from './styles/styled';
 
 class FancyPost extends Component {
   render() {
+    const { previewAddons } = this.props;
     return (
-      <Wrapper>
+      <FancyPostContainer>
         <TypeHere
+          previewAddons={previewAddons}
           preview={Preview}
         />
         <FormType
           {...this.props}
         />
-      </Wrapper>
+        <CopyAndPasteOptions />
+      </FancyPostContainer>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  typeHereValue: state.typeHereValue,
+  typeHereValue: state.typeHereReducer.typeHereValue,
 });
 
 export default connect(mapStateToProps, undefined)(FancyPost);

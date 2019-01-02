@@ -2,7 +2,11 @@ export const initialState = {
   typeHereValue: undefined,
 };
 
-export default (state = initialState, action) => {
+export const activeOptionAction = {
+  option: undefined,
+};
+
+export const typeHereReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'TYPE_HERE_VALUE':
       return Object.assign({}, state, {
@@ -12,3 +16,16 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export const activeOptionReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'ACTIVE_OPTION':
+      return Object.assign({}, state, {
+        activeOption: action.activeOption,
+      });
+    default:
+      return state;
+  }
+};
+
+export default typeHereReducer;
