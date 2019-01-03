@@ -1,7 +1,7 @@
 # Fancy post
 Fancy post is a modern post editor. Created and maintained by James Star at [Puff Stream](https://www.puffstream.com).
 
-<img src="screenshots/fancy-post-example-1.png" title="fancy-post"/> <!-- .element height="100%" width="100%" -->
+<img src="screenshots/fancy-post-example-1.gif" title="fancy-post"/> <!-- .element height="100%" width="100%" -->
 
 Type "hello kitty" and Fancy post will return the most suitable form for your post entry, such as, `Post`, `Web url` or `Image`. 
 
